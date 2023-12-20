@@ -5,31 +5,36 @@
 }
 
 body {
+    
     margin: 30px;
     font-family: 'Poppins', sans-serif;
 }
 
+/* for all a tag in page */
 a {
     color: black;
     text-decoration: none;
 }
 
+/* for all paragraph in page */
 p {
     line-height: 25px;
 }
 
+/* for header navbar */
+header{
+    min-width: 400px;
+    display: flex;
+}
 h1 {
     font-size: 20px;
-    float: left;
-    font-weight: bold;
+    flex: 20%;
 }
 
 header ul {
-    margin-left: 390px;
-    float: left;
+    flex: 60%;
     text-align: center;
 }
-
 header ul li,
 header ul li a {
     font-weight: bold;
@@ -41,8 +46,8 @@ header ul li a {
 }
 
 .login {
-    display: inline-block;
-    margin-left: 390px;
+    text-align: end;
+    flex: 20%;
 }
 
 .login button {
@@ -59,17 +64,15 @@ header ul li a {
     margin-left: 20px;
 }
 
+/* about company details */
 .aboutcompany {
     background-color: rgb(225, 242, 249);
-    margin-top: 10px;
-    height: 500px;
+    display: flex;
 }
 
 .comp {
-    margin-top: 100px;
-    margin-left: 100px;
-    float: left;
-    width: 600px;
+    flex : 50%;
+    margin: 100px 0px 100px 100px;
 }
 
 h2 {
@@ -102,24 +105,41 @@ h2 {
     color: white;
 }
 
+.logoone{
+    flex: 50%;
+    text-align: center;
+}
 .logo {
-    margin-top: 40px;
-    margin-left: 100px;
-    max-width: 520px;
+    max-width: 500px;
 }
 
+/* media query for aboutus  */
+@media (max-width: 1100px){
+    .aboutcompany {
+        flex-wrap: wrap;
+    }
+    .comp {
+        margin: 50px 50px 0px 50px;
+    }
+}
+
+/* for furniture list one */
 .fonelist {
     margin: 50px 150px;
 }
-
 .our {
     font-weight: bold;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
+.flexfone{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .one {
     width: 350px;
-    display: inline-block;
     margin: 10px;
     background-color: rgb(219, 217, 217);
 }
@@ -132,7 +152,6 @@ h2 {
 .one p {
     margin-left: 30px;
     display: inline-block;
-
 }
 
 .one span {
@@ -151,34 +170,51 @@ h2 {
     font-weight: 600;
     font-size: 17px;
 }
+/* media query for our furniture section  */
+@media (max-width: 1470px ) {
+    .fonelist {
+        margin: 50px 0px;
+    }
+    .our{
+        text-align: center;
+    }
+    .ourp{
+        text-align: center;
+    }
+}
 
+/* for about us section  */
 .about {
     margin-bottom: 60px;
-    padding: 0px 100px;
-    height: 400px;
     background-color: rgb(225, 242, 249);
+    display: flex;
+    flex-wrap: wrap;
 }
-
+.logotwo{
+    flex: 50%;
+    text-align: center;
+}
 .logo2 {
-    margin: 0px 120px 0px 120px;
-    float: left;
-    max-width: 400px;
+    max-width: 500px;
 }
 
+.aboutus{
+    padding: 0px 100px;
+    margin-top: 90px;
+    flex: 50%;
+    flex-wrap: wrap;
+}
 .about_us {
     font-weight: bold;
-    margin-top: 90px;
-    margin-bottom: 20px;
     font-size: 30px;
 }
 
 .about p {
-    display: inline-block;
-    width: 600px;
+    margin-top: 20px;
 }
 
-.about button {
-    margin-top: 30px;
+.aboutus button {
+    margin: 20px 0px 50px 0px;
     width: 180px;
     height: 35px;
     background-color: rgb(105, 194, 233);
@@ -189,20 +225,33 @@ h2 {
     color: white;
     font-size: 16px;
 }
+/* media query for about us section  */
+@media (max-width: 1100px){
+    .about {
+        flex-wrap: wrap;
+    }
+    .aboutus{
+        padding: 0px 50px;
+    }
+}
 
+/* for letest blog and testimonial heading */
 .heading {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
+/* for letest blogs */
 .letest {
     margin: 50px 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .two {
     width: 350px;
-    display: inline-block;
     margin: 10px;
 }
 
@@ -230,32 +279,56 @@ h2 {
     color: white;
     font-size: 16px;
 }
-
-.review {
-    height: 200px;
-    box-shadow: 0px 4px 15px rgb(117, 117, 117);
-    margin: 50px 200px;
+/* media query for about us section  */
+@media (max-width:1470px){
+    .letest {
+        margin: 50px 0px;
+    }
 }
 
-.review img {
-    margin: 35px 50px;
-    float: left;
+/* for review on Testimonial */
+.reviewof {
+    box-shadow: 0px 4px 15px rgb(117, 117, 117);
+    margin: 50px 200px;
+    display: flex;
+}
+.reviewerdp{
+    flex: 20%;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 10px;
+}
+.reviewof img {
     width: 130px;
     height: 130px;
     border-radius: 200px;
 }
-
-#quote {
-    margin-top: 30px;
+.review{
+    margin: 30px 0px;
+    flex: 80%;
 }
-
 .reviewer_name {
     font-size: 24px;
     margin: 10px 0px;
     font-weight: 600;
     color: rgb(105, 194, 233);
 }
+/* media query for Testimonial*/
+@media (max-width: 1300px){
+    .reviewof {
+        margin: 20px 100px;
+    }
+}
+@media (max-width: 900px){
+    .reviewof {
+        margin: 20px 40px;
+    }
+    .review{
+        margin: 10px 0px;
+    }
+}
 
+/* for review change arrow */
 .arrow {
     text-align: center;
 }
@@ -269,14 +342,19 @@ h2 {
     border-radius: 30px;
 }
 
+/* for contact form and map of store*/
 .contact_us {
-    padding: 30px 120px;
     margin-top: 50px;
     background-color: rgb(225, 242, 249);
+    display: flex;
 }
 
-.contact_us div {
-    display: inline-block;
+.form{
+    padding: 30px 0px 30px 120px;
+    flex: 50%;
+}
+iframe {
+    margin: 20px 30px;
 }
 
 .contact_us span {
@@ -310,35 +388,44 @@ textarea {
     color: white;
 }
 
-iframe {
-    float: right;
+/* media query for contact form and map of store*/
+@media (max-width: 1100px){
+    .contact_us {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .form{
+        padding: 30px 0px;
+    }        
 }
 
+/* for footer */
 footer {
-    margin-top: 30px;
-    height: 380px;
     color: white;
     background-color: black;
+    margin-top: 30px;
 }
-
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 100px;  
+}
 footer a {
     color: white;
 }
 
+/* for call email and location */
 .phone {
-    display: inline-block;
+    flex: 33%;
     text-align: center;
-    width: 200px;
-    margin: 40px 140px;
 }
 
-
 /* for quick menu , instagram feed and signup */
+
 .footermenu {
-    width: 300px;
-    height: 300px;
-    float: left;
-    margin-left: 160px;
+    flex: 25%;
+    padding: 50px;
 }
 
 .footermenu p {
@@ -347,12 +434,13 @@ footer a {
 }
 
 footer ul {
+    flex-wrap: nowrap;
     margin-top: 20px;
 }
 
 footer li,
 footer li a {
-    width: 120px;
+    width: 110px;
     display: inline-block;
     color: white;
 }
@@ -378,11 +466,24 @@ footer button {
     margin: 10px 0px;
 }
 
-footer i {
+.footermenu i {
     color: rgb(105, 194, 233);
     margin: 5px;
     width: 38px;
     height: 38px;
     padding: 10px;
     border: 1px solid rgb(105, 194, 233);
+}
+
+/* media query for footer*/
+@media (max-width: 1100px){
+    .footer{
+        flex-wrap: wrap;
+        padding: 30px 30px;  
+    }   
+}
+@media (max-width: 690px){
+    .footermenu{
+        flex: 100%;
+    }
 }
