@@ -351,7 +351,7 @@ h2 {
 }
 
 /* media query for about us section  */
-@media (max-width:1470px) {
+@media (max-width:1100px) {
     .letest {
         margin: 50px 0px;
     }
@@ -402,7 +402,7 @@ h2 {
 }
 
 /* media query for Testimonial*/
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
     .reviewof {
         margin: 20px 100px;
     }
