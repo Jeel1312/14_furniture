@@ -2,11 +2,17 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 30px;
-    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width : 500px) {
+    body {
+        margin: 10px;
+    }
 }
 
 /* for all a tag in page */
@@ -22,17 +28,16 @@ p {
 
 /* for header navbar */
 header {
-    min-width: 400px;
     display: flex;
 }
 
 h1 {
     font-size: 20px;
-    flex: 20%;
+    flex: 25%;
 }
 
 header ul {
-    flex: 60%;
+    flex: 50%;
     text-align: center;
 }
 
@@ -48,7 +53,7 @@ header ul li a {
 
 .login {
     text-align: end;
-    flex: 20%;
+    flex: 25%;
 }
 
 .login button {
@@ -63,6 +68,27 @@ header ul li a {
 
 #search {
     margin-left: 20px;
+}
+
+/* media query for header */
+@media (max-width : 500px) {
+    header {
+        text-align: center;
+        display: block;
+        margin: 10px 0px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    header ul {
+        margin: 20px 0px;
+    }
+
+    .login {
+        text-align: center;
+    }
 }
 
 /* about company details */
@@ -123,6 +149,16 @@ h2 {
 
     .comp {
         margin: 50px 50px 0px 50px;
+    }
+
+    .logo {
+        width: 80%;
+    }
+}
+
+@media (max-width : 500px) {
+    h2 {
+        font-size: 32px;
     }
 }
 
@@ -191,6 +227,22 @@ h2 {
     }
 }
 
+@media (max-width: 450px) {
+    .one {
+        width: 80%;
+    }
+
+    .one img {
+        width: 80%;
+        height: auto;
+    }
+
+    .one button {
+        margin-left: 40px;
+    }
+}
+
+
 /* for about us section  */
 .about {
     margin-bottom: 60px;
@@ -205,7 +257,7 @@ h2 {
 }
 
 .logo2 {
-    max-width: 500px;
+    width: 500px;
 }
 
 .aboutus {
@@ -239,12 +291,17 @@ h2 {
 
 /* media query for about us section  */
 @media (max-width: 1100px) {
+    .logo2 {
+        width: 80%;
+    }
+
     .about {
         flex-wrap: wrap;
     }
 
     .aboutus {
         padding: 0px 50px;
+        margin-top: 20px;
     }
 }
 
@@ -300,6 +357,18 @@ h2 {
     }
 }
 
+@media (max-width: 450px) {
+    .two {
+        text-align: center;
+    }
+
+    .two img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
 /* for review on Testimonial */
 .reviewof {
     box-shadow: 0px 4px 15px rgb(117, 117, 117);
@@ -349,6 +418,20 @@ h2 {
     }
 }
 
+@media (max-width: 500px) {
+    .reviewof {
+        flex-wrap: wrap;
+    }
+
+    .review {
+        margin: 0px 20px 20px;
+    }
+
+    .reviewerdp {
+        margin: 10px 0px;
+    }
+}
+
 /* for review change arrow */
 .arrow {
     text-align: center;
@@ -368,6 +451,7 @@ h2 {
     margin-top: 50px;
     background-color: rgb(225, 242, 249);
     display: flex;
+    justify-content: center;
 }
 
 .form {
@@ -414,7 +498,6 @@ textarea {
 @media (max-width: 1100px) {
     .contact_us {
         flex-wrap: wrap;
-        justify-content: center;
         text-align: center;
     }
 
@@ -422,6 +505,41 @@ textarea {
         padding: 30px 0px;
     }
 }
+
+@media (max-width: 700px) {
+    section input {
+        width: 350px;
+        padding: 7px;
+    }
+
+    textarea {
+        width: 350px;
+        padding: 7px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 420px) {
+    section input {
+        width: 250px;
+        padding: 5px;
+    }
+
+    textarea {
+        width: 250px;
+        padding: 5px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 300px;
+    }
+}
+
 
 /* for footer */
 footer {
@@ -477,7 +595,7 @@ footer li a {
 }
 
 footer input {
-    width: 300px;
+    width: 290px;
     padding: 10px;
     border: none;
 }
@@ -501,15 +619,32 @@ footer button {
 }
 
 /* media query for footer*/
-@media (max-width: 1100px) {
+@media (max-width: 1265px) {
     .footer {
         flex-wrap: wrap;
-        padding: 30px 30px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 690px) {
     .footermenu {
+        padding: 20px 0px;
         flex: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .phone {
+        padding: 20px;
+        flex: 100%;
+    }
+
+    .footer {
+        padding: 0px;
+    }
+
+    footer input {
+        width: 240px;
+        padding: 5px;
     }
 }
